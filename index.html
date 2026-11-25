@@ -197,12 +197,12 @@ nav button{flex:1;border:0;background:transparent;font-family:inherit;color:var(
 nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7}
 nav button.on{color:var(--navy);background:var(--aqua);box-shadow:inset 0 0 0 1.5px var(--aqua-line)}
 </style>
-<!--TQHEAD--><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json"><meta name="apple-mobile-web-app-title" content="永續能力測驗"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#143d32"><meta name="esg-version" content="20261125-122249"><script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").then(function(reg){function watch(w){if(!w)return;w.addEventListener("statechange",function(){if(w.state==="activated"&&navigator.serviceWorker.controller&&!window.__tqReloaded){window.__tqReloaded=1;location.reload();}});}watch(reg.installing);reg.addEventListener("updatefound",function(){watch(reg.installing);});reg.update();document.addEventListener("visibilitychange",function(){if(!document.hidden)reg.update();});setInterval(function(){reg.update();},30*60*1000);}).catch(function(){});}</script><!--/TQHEAD-->
+<!--TQHEAD--><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.json"><meta name="apple-mobile-web-app-title" content="永續能力測驗"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#143d32"><meta name="esg-version" content="20261125-122523"><script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").then(function(reg){function watch(w){if(!w)return;w.addEventListener("statechange",function(){if(w.state==="activated"&&navigator.serviceWorker.controller&&!window.__tqReloaded){window.__tqReloaded=1;location.reload();}});}watch(reg.installing);reg.addEventListener("updatefound",function(){watch(reg.installing);});reg.update();document.addEventListener("visibilitychange",function(){if(!document.hidden)reg.update();});setInterval(function(){reg.update();},30*60*1000);}).catch(function(){});}</script><!--/TQHEAD-->
 </head>
 <body>
 <header>
   <h1>永續發展基礎能力測驗練習</h1>
-  <div class="sub" id="hsub">2026/12/19（六）13:50～15:20 · 金研院院本部 402 電腦教室</div>
+  
   <div class="whobtn" id="whowrap" onclick="openPicker()" title="切換使用者">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
     <span id="who">—</span><span style="margin-left:5px;opacity:.75;font-size:.72rem">切換</span>
@@ -890,9 +890,6 @@ document.getElementById('picker').addEventListener('click',e=>{
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncFromCloud();});
 window.addEventListener('focus',()=>syncFromCloud());
 
-// ---- 考試倒數 ----
-(function(){ const d=Math.ceil((new Date('2026-12-19T13:50:00+08:00')-Date.now())/86400000);
-  const e=document.getElementById('hsub'); if(e&&d>0) e.textContent='距考試 '+d+' 天 · 12/19（六）13:50～15:20 · 金研院院本部 402 電腦教室'; })();
 // ---- 啟動：必須先勾選姓名 ----
 if(USER){
   migrateLegacy();
