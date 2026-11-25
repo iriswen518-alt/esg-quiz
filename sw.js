@@ -1,4 +1,4 @@
-const VER = '20261125-122523';
+const VER = '20261125-123319';
 const CACHE = 'esg-' + VER;
 self.addEventListener('install', e => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil((async () => {
